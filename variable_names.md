@@ -32,15 +32,16 @@ Some rules for naming fields:
 
 * Please use all lowercase characters for all fields.
 * Field names can only include letters, numbers, and underscores, and they _must_ start with a letter or underscore--not a number.
-* Keep the field names short, but descriptive. When you must choose between short length and clarity, choose clarity.
-* When you have several related variables in a row, try to start the field name with the feature that groups them, for easy alphabetical sorting. E.g., asset_checking, asset_savings, etc.
-* Avoid acronyms and abbreviations, other than very common ones such as ID.
 * Separate multiple words in a field name with an underscore.
-* Use verb-noun pairs for checkboxes. E.g., is_parent, speaks_spanish, has_assets
-* For checkboxes with a yes and no pair, add `_no` and `_yes` to the end. E.g., is_parent_yes and is_parent_no
-* For date variables other than birthdate, end the question with `_date`. E.g., filedanswer_date
-* Keep the length of variable names under 79 characters (unlikely you'll reach this limit, but just to be specific)
-* For large blocks of text divided into lines, use one variable to label the entire block of text as one field, rather than labelling     each line as a separate field individually.
+* Keep the field names short, but descriptive. When you must choose between short length and clarity, choose clarity.
+* Avoid acronyms and abbreviations, other than very common ones such as ID.
+* When you have several **related variables** in a row, try to start the field name with the feature that groups them, for easy alphabetical sorting. E.g., asset_checking, asset_savings, etc.
+* Use verb-noun pairs for **checkboxes**. E.g., is_parent, speaks_spanish, has_assets
+* For **checkboxes** with a yes and no pair, add `_no` and `_yes` to the end. E.g., is_parent_yes and is_parent_no
+* For **date variables** other than birthdate, end the question with `_date`. E.g., filedanswer_date
+* If you need to refer to the **same field name more than once** in a single form, you will need to add two underscores followed by a number to distinguish them. E.g., user_name_full, user_name_full__1, user_name_full__2.
+* Keep the **length of variable names** under 79 characters (unlikely you'll reach this limit, but just to be specific)
+* For **questions with more than one line to write an answer**, use one field over the entire text block, rather than labelling each line as a separate field individually. 
 
 This makes use of work at https://github.com/knod/docassemble-standards/wiki/Standardized-Definitions-For-Variable-Names, 
 with some changes because we are using PDFs and not Word Documents.
@@ -49,7 +50,7 @@ with some changes because we are using PDFs and not Word Documents.
 
 We have 4 main groups of people:
 
-1. the user, and possibly other users (user2, user3, etc.) representing co-parties
+1. the user, and possibly other users (user2, user3, etc.) representing co-parties (this is the person completing the form)
 1. a child/children
 1. the opposing party/parties
 1. a witness(es)
@@ -76,7 +77,6 @@ sorted into "Other", "Female", and "Male". There will be a message
 to the user letting them know that their custom entry will be used
 wherever it's possible.
 1. All the individuals can have the fields you see in the `users` fields.
-
 
 
 <!--
